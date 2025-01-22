@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Generate test data
 
+## [0.1.1] - Wed Jan 22 03:13:36 PM PST 2025
+
+### Changed
+
+- Avoid duplicate questions in the generated dataset
+
+
 ## [0.1.0] - Wed Jan 22 12:56:29 PM PST 2025
 
 ### Added
@@ -18,3 +25,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changelog
 - Script to test connectivity to Ollama
 - Script to generate training data
+
+

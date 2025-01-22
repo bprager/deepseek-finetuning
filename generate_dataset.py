@@ -45,6 +45,7 @@ def setup_logging():
         format="%(asctime)s.%(msecs)03d %(levelname)s %(name)s - %(funcName)s:%(lineno)d: %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
+    # Quiet down overly verbose HTTP logs, if needed
     logging.getLogger("httpx").setLevel(logging.WARNING)
 
 
@@ -94,6 +95,9 @@ def main():
     dataset = []
     generated_count = 0
 
+    # Track questions we've already used
+    seen_questions = set()
+
     # Error counter to stop if more than 10 errors occur
     error_count = 0
 
@@ -112,6 +116,14 @@ def main():
                     break
                 continue
 
+            # Check for duplicates
+            if question in seen_questions:
+                # Not an error—just skip and try again
+                logging.debug("Duplicate question encountered. Skipping:\n%s", question)
+                continue
+            else:
+                seen_questions.add(question)
+
             # Generate an answer
             answer = generate_answer(question)
             if answer is None:
@@ -119,6 +131,8 @@ def main():
                 if error_count > 10:
                     logging.error("Too many errors encountered (%d). Stopping generation.", error_count)
                     break
+                # Since the question was valid but the answer failed, do NOT remove the question
+                # from 'seen_questions'; otherwise you could re-generate duplicates unintentionally.
                 continue
 
             # Add to the dataset in a format suitable for instruction-style fine-tuning
