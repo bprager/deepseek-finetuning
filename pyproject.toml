@@ -1,0 +1,11 @@
+[project]
+name = "deepseek-finetuning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alive-progress>=3.2.0",
+    "ollama>=0.4.7",
+    "requests>=2.32.3",
+]
