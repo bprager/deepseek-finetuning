@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Generate test data
 
+## [0.1.2] - Thu Jan 23 11:51:22 AM PST 2025
+
+### Added
+
+- Training data generated ( Time taken: 19:07:24 )
+
+
 ## [0.1.1] - Wed Jan 22 03:13:36 PM PST 2025
 
 ### Changed
