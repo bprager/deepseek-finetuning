@@ -17,5 +17,8 @@ Square protest, etc.
 
 ## Steps
 
-- Generate a 3,000 question-/answer- dataset via a MS psi4 model.
-- Define a fine-tuning aproach
+- Generate a 3,000 question-/answer- dataset via a Microsoft psi4 model.
+- Identify a suitable model from Huggingface
+  (e.g. https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B)
+- Fine-tunes the "deepseek" model using a LoRA-based parameter-efficient method
+  to produce a smaller adapter while preserving overall performance.
