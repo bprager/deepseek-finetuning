@@ -6,6 +6,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.5] - Mon Jan 27 02:13:18 PM PST 2025
+
+### Added
+
+- Create Ollama model and quantize
+
+
+## [0.1.4] - Sat Jan 25 04:03:01 PM PST 2025
+
+### Added
+
+- Merged base  model and adapter
+
+
 ## [0.1.3] - Thu Jan 23 11:51:22 AM PST 2025
 
 ### Added
